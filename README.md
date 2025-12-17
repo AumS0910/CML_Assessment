@@ -52,6 +52,11 @@ Meaningful error messages are displayed to guide the user.
 - Filter by salary range (min & max)
 - Sort customers by salary
 
+## Unit Tests
+Unit tests are added using Python assertions to validate:
+- Salary cleaning logic
+- Salary filtering correctness
+
 
 ## How to Run the Program
 
