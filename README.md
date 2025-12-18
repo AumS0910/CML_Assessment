@@ -1,5 +1,21 @@
-# Customer Salary Filter - Python CLI Tool
-This Python script filters customers with salaries greater than $10,000 from a CSV file.
+# Customer Salary Filter – Production-Ready Python CLI Tool
+
+A Python command-line application that reads customer records from a CSV file, cleans and validates the data, and filters customers whose salary exceeds a configurable threshold.
+
+This project is designed with **production-readiness** in mind, following clean code principles, proper error handling, modular design, logging, and unit testing.
+
+---
+
+## 📌 Problem Statement
+
+Given a CSV file containing customer records, the program:
+- Accepts the CSV file path as a command-line argument
+- Reads and parses the CSV
+- Filters customers where `customer_salary > 10000`
+- Outputs the filtered result
+- Handles edge cases gracefully
+
+---
 
 ## 1.How do you plan to read the CSV file? Explain your choice
 
@@ -46,19 +62,47 @@ The program handles:
 Meaningful error messages are displayed to guide the user.
 
 
+## Project Structure
+
+.
+├── src/
+│   ├── constants.py
+│   ├── exceptions.py
+│   ├── filter_customers.py
+│   └── utils.py
+├── tests/
+│   └── test_filter.py
+├── data/
+│   └── customer_100.csv
+└── README.md
+
+
+
 ## Additional Filters That Can Be Added
 - Filter by job category
 - Filter by city or state
 - Filter by salary range (min & max)
 - Sort customers by salary
 
-## Unit Tests
-Unit tests are added using Python assertions to validate:
+
+This ensures no hardcoded values are scattered across the codebase.
+
+---
+
+## 🧪 Unit Testing
+
+Unit tests are written using Python’s `unittest` framework to verify:
 - Salary cleaning logic
-- Salary filtering correctness
+- Salary filtering behavior
+- Correct handling of edge cases
+
+### Run tests:
+```bash
+python -m unittest discover tests
 
 
 ## How to Run the Program
 
 ```bash
-python filter_customers.py data/customer_100.csv
+pip install -r requirements.txt
+python run.py data/customer_100.csv
